@@ -1,0 +1,186 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles Globaux */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    /* Utilisez display: grid pour le header */
+    display: grid;
+    /* Divisez en deux colonnes, une pour le logo et une pour la navigation */
+    grid-template-columns: repeat(2, 1fr);
+    
+    background: #333;
+    color: #fff;
+}
+
+.logo {
+    font-weight: bold;
+    align-content: center;
+    padding-left: 10px;
+}
+
+.nav {
+    /* Utilisez display: flex pour la navigation */
+    display: flex;
+    /* Espacez les liens de manière uniforme */
+    justify-content: space-around;
+    
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    /* Donnez un padding a liens */
+    padding: 10px;
+}
+
+.nav a:hover {
+    background: #555;
+}
+
+.hero {
+    /* Utilisez display: grid pour centrer le contenu */
+    display: grid;
+    /* Centre le contenu horizontalement et verticalement */
+    place-items: center;
+    background: #f4f4f4;
+    padding: 20px 10px;
+    gap: 5px;
+}
+
+/* espacer le texte et les boutons.*/
+button {
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+.services {
+    /* Utilisez display: grid pour les services */
+    display: grid;
+    /* Créez trois colonnes égales */
+    grid-template-columns: repeat(3, 1fr);
+    /* Ajoutez un espace entre les colonnes */
+    gap: 10px;
+    place-items: center;
+    margin: 10px;
+}
+.service {
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 5px ;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.testimonials {
+    /* Utilisez display: grid pour les témoignages */
+    display: grid;
+    /* Créez deux colonnes égales */
+    grid-template-columns: repeat(2, 1fr);
+    /* Ajoutez un espace entre les colonnes */
+    gap: 10px;
+    margin: 10px;
+}
+.testimonial {
+    background-color: #f4f4f4;
+    width: 100%;
+    padding: 5px ;
+    
+}
+
+.contact {
+    /* Utilisez display: grid pour centrer le formulaire */
+    display: grid;
+    /* Centre le contenu horizontalement et verticalement */
+    place-items: center;
+    background: #f4f4f4;
+    padding: 30px 10px;
+}
+
+.contact form {
+    /* Utilisez display: grid pour le formulaire */
+    display: grid;
+    /* Ajoutez un espace entre les champs du formulaire */
+    gap: 10px;
+    
+    width: 100%;
+    max-width: 600px;
+    font-weight: bold;
+}
+
+input, textarea {
+    border: 1px solid #f4f4f4;
+    padding: 5px;
+}
+
+.footer {
+    /* Utilisez display: grid pour le footer */
+    display: grid;
+    /* Divisez en deux colonnes */
+    grid-template-columns: repeat(2, 1fr);
+   
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    /* Donnez un padding a liens */
+    padding: 0 20px;
+    
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        /* Adaptez le header pour les petits écrans */
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav {
+        /* Changez l'orientation de la navigation pour les petits écrans */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center
+    }
+
+    .services {
+        /* Adaptez la section services pour les petits écrans */
+        display: flex;
+        width: 100%;  
+    }
+
+    .testimonials {
+        /* Adaptez la section témoignages pour les petits écrans */
+        display: flex;
+        flex-direction: column;
+        padding:10px
+        
+    }
+
+    .footer {
+        /* Adaptez le footer pour les petits écrans */
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
